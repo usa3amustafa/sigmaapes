@@ -1,0 +1,457 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;900&family=Roboto+Condensed:wght@400;700&display=swap');
+
+:root {
+  --color: #fefefe;
+  --bgc: #161616;
+  --black-clr: #161616;
+  --font-family-montserrat: 'Montserrat', sans-serif;
+  --font-family-robotoC: 'Roboto Condensed', sans-serif;
+  --yellow-clr: #fffc00;
+  --hover-grey-clr: #868e96;
+
+  --transition: all 0.2s ease-in-out;
+
+  --shadow-10px: 0px 0px 10px var(--yellow-clr);
+  --shadow-30px: 0px 0px 30px var(--yellow-clr);
+
+  --text-glow: 0 0 5px rgb(254, 254, 254, 0.5), 0 0 10px #fffc00,
+    0 0 30px rgb(255, 252, 0, 0.5);
+}
+
+/* utilities start  */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font-family-montserrat);
+  background-color: var(--bgc);
+}
+
+img {
+  width: 100%;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+section {
+  padding: 6rem 0;
+}
+
+.section-title {
+  text-transform: uppercase;
+  font-size: 3rem;
+  font-weight: 900;
+}
+
+.btn-cta {
+  text-transform: uppercase;
+  color: var(--color);
+  border: 2px solid var(--yellow-clr);
+  padding: 1rem 2rem;
+  border-radius: 4rem;
+  font-size: 1.3rem;
+  font-weight: 900;
+  transition: var(--transition);
+  display: inline-block;
+}
+
+.btn-cta:hover {
+  background-color: var(--color);
+  color: var(--black-clr);
+  box-shadow: var(--shadow-30px);
+}
+
+.container {
+  width: 95%;
+  max-width: 1440px;
+  margin: 0 auto;
+}
+
+.container-sm {
+  width: 90%;
+  max-width: 820px;
+  margin: 0 auto;
+}
+
+/* utilities end  */
+
+/* ********************* */
+
+/* header start  */
+
+.header {
+  color: var(--color);
+  min-height: 100vh;
+  background: url('./img/header-bg.png');
+  background-position: center center;
+  background-size: cover;
+  position: relative;
+}
+
+.nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 0;
+}
+
+.logo {
+  width: 4rem;
+  border-radius: 50%;
+  box-shadow: var(--shadow-10px);
+  transition: var(--transition);
+}
+
+.logo:hover {
+  box-shadow: var(--shadow-30px);
+}
+
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
+
+.nav-link {
+  font-weight: 500;
+  font-size: 1.3rem;
+  color: var(--color);
+  transition: var(--transition);
+}
+
+.nav-link:hover {
+  color: var(--hover-grey-clr);
+}
+
+.header-text {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  margin: 2rem 0;
+  max-width: 50ch;
+  padding-left: 2rem;
+}
+
+.header-text-title {
+  font-size: 4rem;
+  font-weight: 900;
+  text-shadow: var(--text-glow);
+  margin-bottom: 2rem;
+}
+
+.header-text-desc {
+  line-height: 1.6;
+  margin-bottom: 3rem;
+}
+
+/* header end  */
+
+/* seperator text start */
+
+.seperator-text {
+  background: linear-gradient(
+      150deg,
+      rgba(58, 57, 1, 0.25) 0%,
+      rgba(0, 0, 0, 0.95) 50%,
+      rgba(57, 57, 1, 0.25) 99.5%
+    ),
+    url('./img/seperator-bg.svg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
+.seperator-text-text {
+  text-align: center;
+  color: var(--color);
+  font-size: 1.6rem;
+  line-height: 1.5;
+  text-shadow: var(--text-glow);
+  font-weight: 500;
+  word-spacing: 3px;
+}
+
+strong {
+  font-weight: 900;
+}
+
+/* seperator text end */
+
+/* video start */
+
+video {
+  width: 100%;
+}
+
+/* video end */
+
+/* ready section start  */
+
+.ready {
+  background-color: var(--black-clr);
+  color: var(--color);
+  text-align: center;
+}
+
+.ready-title {
+  display: inline-block;
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+.yellow {
+  color: var(--yellow-clr);
+}
+
+.ready-desc {
+  display: grid;
+  place-content: center;
+}
+
+.ready-text {
+  max-width: 70ch;
+  margin-bottom: 1.3rem;
+  line-height: 1.6;
+}
+
+.ready-text:last-child {
+  margin-bottom: 0rem;
+}
+
+/* ready section end  */
+
+/* artists section start  */
+
+.artists-section {
+  background: var(--yellow-clr);
+}
+
+.artists-header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.artists-title {
+  margin-bottom: 1rem;
+}
+
+.artists-text {
+  max-width: 55ch;
+  text-align: center;
+  margin-bottom: 3rem;
+  line-height: 1.6;
+}
+
+.artists {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.artist {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.artist-img {
+  margin-bottom: 1rem;
+  width: 70%;
+}
+
+.artist-name {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  font-weight: 900;
+  text-transform: uppercase;
+}
+
+.artist-about {
+  text-align: center;
+  font-size: 0.95rem;
+  margin-bottom: 1rem;
+  max-width: 35ch;
+  line-height: 1.6;
+}
+
+.artist-imdb-link {
+  font-family: var(--font-family-robotoC);
+  display: inline-block;
+  background: var(--black-clr);
+  color: var(--color);
+  font-size: 2rem;
+  font-weight: 700;
+  padding: 0.25rem 0.5rem;
+  border-radius: 5px;
+  letter-spacing: -1px;
+}
+
+/* artists section end */
+
+/* join the club start  */
+
+.join-club-section {
+  background: url('./img/join-club-bg.png');
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  color: var(--color);
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  min-height: 100vh;
+}
+
+.join-club {
+  max-width: 60ch;
+  margin-left: auto;
+}
+
+.join-club-title {
+  margin-bottom: 1rem;
+}
+
+.join-club-text {
+  margin-bottom: 1.3rem;
+  line-height: 1.6;
+}
+
+.join-club:last-child {
+  margin-bottom: 0;
+}
+
+.join-club-btn {
+  margin-top: 1.7rem;
+}
+
+/* join the club end */
+
+/* team section start */
+
+.team-section {
+  background: var(--color);
+}
+
+.team-section-title {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.team-members {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 1rem;
+}
+
+.tm-row-one {
+  margin-bottom: 2rem;
+}
+
+.tm-row-two {
+  margin-bottom: 4rem;
+}
+
+.member {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.member-img {
+  margin-bottom: 1rem;
+  width: 60%;
+}
+
+.member-name {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  font-weight: 900;
+  text-transform: uppercase;
+}
+
+.member-about {
+  font-size: 0.9rem;
+  text-align: center;
+  margin-bottom: 1rem;
+  max-width: 25ch;
+  line-height: 1.6;
+}
+
+.moderation-team-section {
+  background: var(--color);
+}
+
+.moderation-team-title {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.mtm-row-one,
+.mtm-row-two {
+  margin-bottom: 2rem;
+}
+
+.moderation-member-name {
+  font-size: 1.3rem;
+  font-weight: 900;
+  text-transform: uppercase;
+}
+
+/* moderation team end */
+
+/* festival section start  */
+
+.festival-section {
+  color: var(--color);
+  background: url('./img/festival-bg.png');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  text-align: center;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  min-height: 100vh;
+}
+
+.festival {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.festival-section-title {
+  margin-bottom: 1rem;
+}
+
+.festival-section-text {
+  max-width: 60ch;
+  line-height: 1.6;
+  margin-bottom: 1.3rem;
+}
+
+.festival-section-text:last-child {
+  margin-bottom: 0;
+}
+
+/* festival section end */
