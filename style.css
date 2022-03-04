@@ -110,6 +110,8 @@ section {
   background-position: center center;
   background-size: cover;
   position: relative;
+
+  overflow: hidden;
 }
 
 .nav {
@@ -131,6 +133,8 @@ section {
 }
 
 .nav-links {
+  transition: var(--transition);
+
   display: flex;
   align-items: center;
   gap: 2rem;
@@ -169,7 +173,19 @@ section {
 }
 
 .hamburger {
+  width: 2rem;
+  color: var(--yellow-clr);
+  cursor: pointer;
   display: none;
+}
+
+.close-icon {
+  display: none;
+  width: 2rem;
+  position: absolute;
+  top: 2.2rem;
+  right: 2rem;
+  cursor: pointer;
 }
 
 /* header end  */
@@ -722,7 +738,26 @@ footer {
   }
 
   .nav-links {
-    display: none;
+    height: 100vh;
+    width: 50%;
+    background: linear-gradient(rgb(22, 22, 22, 0.95), rgba(61, 60, 0, 0.95));
+
+    transform: translateX(700px);
+    position: absolute;
+    top: 0;
+    right: 0;
+
+    z-index: 1;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+  }
+
+  .show-nav {
+    transform: translateX(0px);
   }
 
   .nav-btn {
@@ -731,9 +766,14 @@ footer {
 
   .hamburger {
     display: block;
-    font-size: 3rem;
-    color: var(--yellow-clr);
-    cursor: pointer;
+  }
+
+  .close-icon {
+    display: block;
+  }
+
+  .hidden {
+    display: none;
   }
 
   .join-club-section {
@@ -768,6 +808,10 @@ footer {
 @media (max-width: 840px) {
   html {
     font-size: 90%;
+  }
+
+  .nav-links {
+    width: 75%;
   }
 
   .artists {
@@ -862,6 +906,10 @@ footer {
 }
 
 @media (max-width: 520px) {
+  .nav-links {
+    width: 100%;
+  }
+
   .header-text {
     padding-left: 0rem;
     text-align: center;
