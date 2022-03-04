@@ -55,19 +55,26 @@ closeMenuBtn.addEventListener('click', removeNavbar)
 
 navLinks.forEach(navLink => navLink.addEventListener('click', removeNavbar))
 
-// const hamburger = document.querySelector('.hamburger')
-// const closeIcon = document.querySelector('.close-icon')
+// sticky nav using intersection observer API
 
-// const nav = document.querySelector('.nav-links')
+const nav = document.querySelector('.navbar')
 
-// hamburger.addEventListener('click', function () {
-//   hamburger.style.display = 'none'
-//   closeIcon.style.display = 'block'
-//   nav.classList.add('show-nav')
-// })
+const sectionOne = document.querySelector('.header')
 
-// closeIcon.addEventListener('click', function () {
-//   closeIcon.style.display = 'none'
-//   hamburger.style.display = 'block'
-//   nav.classList.remove('show-nav')
-// })
+const navHeight = nav.getBoundingClientRect().height
+
+const stickyNav = function (enteries) {
+  const [entry] = enteries
+  if (!entry.isIntersecting) nav.classList.add('nav-sticky')
+  else nav.classList.remove('nav-sticky')
+}
+
+const stickyNavOptions = {
+  root: null,
+  threshold: 0.1,
+  rootMargin: `-${navHeight}px`,
+}
+
+const observer = new IntersectionObserver(stickyNav, stickyNavOptions)
+
+observer.observe(sectionOne)

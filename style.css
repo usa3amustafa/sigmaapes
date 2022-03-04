@@ -48,7 +48,7 @@ a {
 }
 
 section {
-  padding: 6rem 0;
+  padding: 8rem 0;
 }
 
 .section-title {
@@ -963,3 +963,14 @@ footer {
   }
 }
 /* media queries end */
+
+/* sticky nav */
+
+.nav-sticky {
+  background-color: rgba(0, 0, 0, 0.9);
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1;
+}
