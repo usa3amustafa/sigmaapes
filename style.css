@@ -881,13 +881,12 @@ footer {
   }
 
   .steps {
-    height: 36rem;
+    height: 38rem;
   }
 
   .step {
     font-size: 85%;
     width: 20rem;
-    padding: 1rem;
   }
 
   .slide-btn {
