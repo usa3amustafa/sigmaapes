@@ -838,12 +838,26 @@ footer {
   }
 
   .steps {
-    height: 34rem;
+    height: 32rem;
   }
 
   .step {
     font-size: 90%;
     width: 26rem;
+  }
+
+  .step-number {
+    margin-bottom: 0.5rem;
+  }
+
+  .step-title {
+    font-size: 1.3rem;
+    margin-bottom: 1rem;
+  }
+
+  .step-desc {
+    margin-bottom: 0.5rem;
+    font-size: 0.875rem;
   }
 }
 
@@ -881,11 +895,12 @@ footer {
   }
 
   .steps {
-    height: 38rem;
+    height: 36rem;
   }
 
   .step {
     font-size: 85%;
+    padding: 1.3rem;
     width: 20rem;
   }
 
