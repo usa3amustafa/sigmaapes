@@ -14,7 +14,11 @@ function goToSlide(slide) {
 goToSlide(currSlide)
 
 setInterval(() => {
-  currSlide++
+  if (currSlide === maxSlide - 1) {
+    currSlide = 0
+  } else {
+    currSlide++
+  }
   goToSlide(currSlide)
 }, 3000)
 
