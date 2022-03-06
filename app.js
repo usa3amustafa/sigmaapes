@@ -13,7 +13,7 @@ function goToSlide(slide) {
 
 goToSlide(currSlide)
 
-setInterval(() => {
+let sliderInterval = setInterval(() => {
   if (currSlide === maxSlide - 1) {
     currSlide = 0
   } else {
@@ -29,6 +29,17 @@ btnRight.addEventListener('click', function () {
     currSlide++
   }
 
+  clearInterval(sliderInterval)
+
+  sliderInterval = setInterval(() => {
+    if (currSlide === maxSlide - 1) {
+      currSlide = 0
+    } else {
+      currSlide++
+    }
+    goToSlide(currSlide)
+  }, 3000)
+
   goToSlide(currSlide)
 })
 
@@ -38,6 +49,17 @@ btnLeft.addEventListener('click', function () {
   } else {
     currSlide--
   }
+
+  clearInterval(sliderInterval)
+
+  sliderInterval = setInterval(() => {
+    if (currSlide === maxSlide - 1) {
+      currSlide = 0
+    } else {
+      currSlide++
+    }
+    goToSlide(currSlide)
+  }, 3000)
 
   goToSlide(currSlide)
 })
