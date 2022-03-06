@@ -13,6 +13,11 @@ function goToSlide(slide) {
 
 goToSlide(currSlide)
 
+setInterval(() => {
+  currSlide++
+  goToSlide(currSlide)
+}, 3000)
+
 btnRight.addEventListener('click', function () {
   if (currSlide === maxSlide - 1) {
     currSlide = 0
